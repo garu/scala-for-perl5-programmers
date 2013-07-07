@@ -36,7 +36,7 @@ Save the text file as 'app.scala' and run it through 'bin/scala' program you jus
 
         bin/scala app.scala 
 
-Not many Perl developers are into REPLs, but just in case you're one of the few, running `bin/scala` without arguments runs Scala in REPL mode, like Perl's Devel::REPL, letting you quickly experiment with code. Take it for a spin!
+Not many Perl developers are into REPLs, but just in case you're one of the few, running `bin/scala` without arguments runs Scala in REPL mode, like Perl's Devel::REPL or Reply, letting you quickly experiment with code. Take it for a spin!
 
 
 Basic Syntax
