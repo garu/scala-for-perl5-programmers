@@ -34,7 +34,7 @@ Running your Scala programs
 
 Save the text file as 'app.scala' and run it through 'bin/scala' program you just installed (can be just 'scala' or a full path, depending on which directory you are and whether or not you set your PATH environment variable accordingly):
 
-        bin/scala app.scala 
+    bin/scala app.scala 
 
 Not many Perl developers are into REPLs, but just in case you're one of the few, running `bin/scala` without arguments runs Scala in REPL mode, like Perl's Devel::REPL or Reply, letting you quickly experiment with code. Take it for a spin!
 
@@ -135,11 +135,11 @@ This will avoid weird compile-time errors while still letting you tidy your code
 
 ### Manipulating variables
 
-        + - / * % work as expected
-        logical operators &, |, ! and ^ (xor) also work
-        <<  shift bits to the left
-        >>  shift bits to the right preserving sign
-        >>> shift right and zero left bits
+    + - / * % work as expected
+    logical operators &, |, ! and ^ (xor) also work
+    <<  shift bits to the left
+    >>  shift bits to the right preserving sign
+    >>> shift right and zero left bits
 
 **Note:** As mentioned before, in Scala *everything is an object*, so even though it may look like independent tokens and functions to a Perl developer, all manipulation is in reality calling a method for you. Thankfully, Scala is clever enough to realize what you mean just so you don't have to add parentheses and dots everywhere (yeah, it uses "." for method calling, not "->"). In other words, when you write something like:
 
@@ -169,14 +169,14 @@ Note that you would need to write *(2).* instead of *2.* because *2.* is type Do
 
 Aside from the plain arithmetic and bitwise operators mentioned above, numbers have the following methods to help you interoperate data from variables of different types:
 
-        .toByte
-        .toChar
-        .toDouble
-        .toFloat
-        .toInt
-        .toLong
-        .toShort
-        .toString
+    .toByte
+    .toChar
+    .toDouble
+    .toFloat
+    .toInt
+    .toLong
+    .toShort
+    .toString
 
 So you can have something like:
 
@@ -190,29 +190,28 @@ val y = x.toInt + 9
 
 Strings have several helper methods to let you manipulate them. The ones that you're more likely to be interested right now are:
 
+    .length                      // string size, in characters.
+    .isEmpty                     // true if string has 0 length.
 
-        .length                      // string size, in characters.
-        .isEmpty                     // true if string has 0 length.
+    .reverse()                   // like Perl's "reverse".
+    .trim()                      // removes whitespace characters from left or right.
+    .split("regex")              // like Perl 5's "split" (can even set a limit as a second arg).
+    .concat("append me")         // concatenates new string to the end of original string.
+    .toLowerCase()               // like Perl's "lc".
+    .toUpperCase()               // like Perl's "uc".
 
-        .reverse()                   // like Perl's "reverse".
-        .trim()                      // removes whitespace characters from left or right.
-        .split("regex")              // like Perl 5's "split" (can even set a limit as a second arg).
-        .concat("append me")         // concatenates new string to the end of original string.
-        .toLowerCase()               // like Perl's "lc".
-        .toUpperCase()               // like Perl's "uc".
+    .charAt(2)                   // returns the character at the specified index.
+    .indexOf("subString")        // similar to "index" in Perl 5.
+    .contains("subString")       // similar to "index >= 0" in Perl 5.
+    .substring(begin, end)       // like Perl 5's "substr", but uses start/end indices.
+                                 // rather than index + size. Doesn't let you replace though.
 
-        .charAt(2)                   // returns the character at the specified index.
-        .indexOf("subString")        // similar to "index" in Perl 5.
-        .contains("subString")       // similar to "index >= 0" in Perl 5.
-        .substring(begin, end)       // like Perl 5's "substr", but uses start/end indices.
-                                     // rather than index + size. Doesn't let you replace though.
-
-        .equals("otherString")       // similar to "eq" in Perl 5.
-        .equalsIgnoreCase("...")     // same as above but ignoring case. Similar to "eq fc" in Perl 5.
-        .compareTo("otherString")    // similar to "cmp" in Perl 5 (Unicode aware).
-        .compareToIgnoreCase("...")  // same but ignoring case.
-        .startsWith("subString")     // true if string starts with given "subString".
-        .endsWith("subString")       // true if string ends with given "subString".
+    .equals("otherString")       // similar to "eq" in Perl 5.
+    .equalsIgnoreCase("...")     // same as above but ignoring case. Similar to "eq fc" in Perl 5.
+    .compareTo("otherString")    // similar to "cmp" in Perl 5 (Unicode aware).
+    .compareToIgnoreCase("...")  // same but ignoring case.
+    .startsWith("subString")     // true if string starts with given "subString".
+    .endsWith("subString")       // true if string ends with given "subString".
 
 Sorry, I couldn't find ready-to-use "chop", "chomp", "chr", "crypt", "hex", "lcfirst", "ucfirst", "oct", "ord", "rindex" or "sprintf" - at least not for plain String objects anyway. Let me know if there are any so I can update this!
 
@@ -351,60 +350,60 @@ val moarElements = data.flatMap { x => List( x-1, x, x+1 ) }
 
 Now, if you do arrays in Perl, you're probably looking for ways to replicate all the cool stuff that you can do with List::AllUtils. Here's a compiled cheatsheet with everything I could find (let me know if you have updates!)
 
-        Perl 5      ## Scala
-        --------------------
-        scalar @a   ## .size
-        map         ## .map { condition }
-        grep        ## .filter { condition }
-        join        ## .mkString("separator")
-        reverse     ## .reverse()
-        sort        ## .sort()    // List() objects only, not Array()
+    Perl 5      ## Scala
+    --------------------
+    scalar @a   ## .size
+    map         ## .map { condition }
+    grep        ## .filter { condition }
+    join        ## .mkString("separator")
+    reverse     ## .reverse()
+    sort        ## .sort()    // List() objects only, not Array()
 
-        pop         ## .takeRight(1) gets the element, .dropRight(1) reduces the list
-        push        ## :+ (for one element) and ++ (for another list)
-        shift       ## .take(1) gets the element, .drop(1) reduces the list
-        unshift     ## +: (for one element) and :: (for another list)
-        splice      ## .slice(index1, index2) (see also: .patch() for replacing the slice data)
+    pop         ## .takeRight(1) gets the element, .dropRight(1) reduces the list
+    push        ## :+ (for one element) and ++ (for another list)
+    shift       ## .take(1) gets the element, .drop(1) reduces the list
+    unshift     ## +: (for one element) and :: (for another list)
+    splice      ## .slice(index1, index2) (see also: .patch() for replacing the slice data)
 
-        # List::Util
-        first { $_ > 5 }   ## .find { _ > 5 }
-        max                ## .max
-        maxstr             ## .max
-        min                ## .min
-        minstr             ## .min
-        reduce { $a + $b } ## .reduce { _ + _ }
-        shuffle @list      ## scala.util.Random.shuffle(list)
-        sum                ## .sum
+    # List::Util
+    first { $_ > 5 }   ## .find { _ > 5 }
+    max                ## .max
+    maxstr             ## .max
+    min                ## .min
+    minstr             ## .min
+    reduce { $a + $b } ## .reduce { _ + _ }
+    shuffle @list      ## scala.util.Random.shuffle(list)
+    sum                ## .sum
 
-        # List::MoreUtils
-        any { $_ < 3 }         ## .exists { _ < 3 }
-        all { $_ > 0 }         ## .forall { _ > 0 }
-        none                   ## ??? (can be implemented with "! .exists")
-        notall                 ## ??? (can be implemented with "! .forall")
-        true { $_ < 3 }        ## .count { $_ < 3 } 
-        false                  ## ??? (can be implemented negating the condition in .count)
+    # List::MoreUtils
+    any { $_ < 3 }         ## .exists { _ < 3 }
+    all { $_ > 0 }         ## .forall { _ > 0 }
+    none                   ## ??? (can be implemented with "! .exists")
+    notall                 ## ??? (can be implemented with "! .forall")
+    true { $_ < 3 }        ## .count { $_ < 3 } 
+    false                  ## ??? (can be implemented negating the condition in .count)
 
-        firstidx/first_index   ## .indexWhere { _ > 0 }  (also returns -1 if not found)
-        lastidx/last_index     ## .lastIndexWhere { _ > 0 } (same deal as above)
+    firstidx/first_index   ## .indexWhere { _ > 0 }  (also returns -1 if not found)
+    lastidx/last_index     ## .lastIndexWhere { _ > 0 } (same deal as above)
 
-        insert_after           ## ???
-        insert_after_string    ## ???
-        apply                  ## .map
-        indexes                ## ??? (no indicesWhere yet...)
-        after                  ## ???
-        after_incl             ## ???
-        before                 ## ???
-        before_incl            ## ???
+    insert_after           ## ???
+    insert_after_string    ## ???
+    apply                  ## .map
+    indexes                ## ??? (no indicesWhere yet...)
+    after                  ## ???
+    after_incl             ## ???
+    before                 ## ???
+    before_incl            ## ???
 
-        firstval/first_value      ## .find { _ > 5 }
-        lastval/last_value        ## ???
-        each_array/each_arrayref  ## ???
-        pairwise                  ## ??? (might be done with .zip and another method)
-        natatime                  ## .grouped(n).foreach  // each group is a Vector object
-        mesh/zip                  ## .zip (for 2 lists. Keep chaining .zip calls for extra lists)
-        uniq/distinct             ## .distinct()
-        minmax                    ## ???
-        part                      ## .partition { cond }  // but works a bit differently
+    firstval/first_value      ## .find { _ > 5 }
+    lastval/last_value        ## ???
+    each_array/each_arrayref  ## ???
+    pairwise                  ## ??? (might be done with .zip and another method)
+    natatime                  ## .grouped(n).foreach  // each group is a Vector object
+    mesh/zip                  ## .zip (for 2 lists. Keep chaining .zip calls for extra lists)
+    uniq/distinct             ## .distinct()
+    minmax                    ## ???
+    part                      ## .partition { cond }  // but works a bit differently
 
 There's also an efficient way to check if the list/array contains a given element: ```.contains( element )``` usually done in Perl 5 with an any() that looks for the element explicitly. Another cool method is ```list.diff(anotherList)``` which is similar to distinct() but returns a list of elements in the original array which are not present in "anotherList".
 
@@ -642,7 +641,7 @@ do {
 
 This behaves just like Perl's do-while construct, except there is no standalone *do()* function - it must always precede a *while()*.
 
-The *foreach()* method is also available, and let you access the current element via the `_` variable (sounds familiar?)
+The *foreach()* method is also available, and let you access the current element via the ```_``` variable (sounds familiar?)
 
 ```scala
 val numbers = List(1, 13, 42)
@@ -800,7 +799,7 @@ This is a great example on how to take advantage of Java's libraries from Scala.
 
 ### Invoking External Programs
 
-In Perl you're used to calling qx(), \`\` or system(). For extra points, you might use something like the IPC::Run* family of modules or Capture::Tiny. In Scala, external process execution is done via [scala.sys.process]. This trait incorporates 3 main modules in string objects: `.!`, `.!!` and `.lines`:
+In Perl you're used to calling qx(), \`\` or system(). For extra points, you might use something like the IPC::Run\* family of modules or Capture::Tiny. In Scala, external process execution is done via [scala.sys.process]. This trait incorporates 3 main modules in string objects: `.!`, `.!!` and `.lines`:
 
 ```scala
 import scala.sys.process._
@@ -1273,7 +1272,7 @@ class Point (initialX: Int, initialY: Int) {
 
 Not as fancy as Pod, but does the trick. You create your documentation by typing on the command line:
 
-        scaladoc <options> <source files>
+    scaladoc <options> <source files>
 
 Check out scaladoc's man page for extra information. As for generic data such as contact details, license type, general description and code sections, I'm really not sure. Most people just seem to write README and markdown files without standards (so don't expect to find a Pod::Weaver equivalent in Scala), except maybe for keeping docs in the "docs" directory of your package.
 
@@ -1352,7 +1351,7 @@ Check [here](http://www.scalatest.org/getting_started_with_feature_spec) for a m
 
 To run your tests, make sure you have downloaded ScalaTest's `.jar` file and placed it under your project's path, then run:
 
-        $ bin/scala scalatest-1.9.1.jar org.scalatest.run myTestFile
+    $ bin/scala scalatest-1.9.1.jar org.scalatest.run myTestFile
 
 
 Is There a "CSAN"?
