@@ -191,28 +191,28 @@ So you can have something like:
 Strings have several helper methods to let you manipulate them. The ones that you're more likely to be interested right now are:
 
 
-        .length                      // string size, in characters
-        .isEmpty                     // true if string has 0 length
+        .length                      // string size, in characters.
+        .isEmpty                     // true if string has 0 length.
 
-        .reverse()                   // like Perl's "reverse"
-        .trim()                      // removes whitespace characters from left or right
-        .split("regex")              // like Perl 5's "split" (can even set a limit as a second arg)
-        .concat("append me")         // concatenates new string to the end of original string
-        .toLowerCase()               // like Perl's "lc"
-        .toUpperCase()               // like Perl's "uc"
+        .reverse()                   // like Perl's "reverse".
+        .trim()                      // removes whitespace characters from left or right.
+        .split("regex")              // like Perl 5's "split" (can even set a limit as a second arg).
+        .concat("append me")         // concatenates new string to the end of original string.
+        .toLowerCase()               // like Perl's "lc".
+        .toUpperCase()               // like Perl's "uc".
 
-        .charAt(2)                   // returns the character at the specified index
+        .charAt(2)                   // returns the character at the specified index.
         .indexOf("subString")        // similar to "index" in Perl 5.
         .contains("subString")       // similar to "index >= 0" in Perl 5.
-        .substring(begin, end)       // like Perl 5's "substr", but uses start/end indices
+        .substring(begin, end)       // like Perl 5's "substr", but uses start/end indices.
                                      // rather than index + size. Doesn't let you replace though.
 
         .equals("otherString")       // similar to "eq" in Perl 5.
         .equalsIgnoreCase("...")     // same as above but ignoring case. Similar to "eq fc" in Perl 5.
         .compareTo("otherString")    // similar to "cmp" in Perl 5 (Unicode aware).
         .compareToIgnoreCase("...")  // same but ignoring case.
-        .startsWith("subString")     // true if string starts with given "subString"
-        .endsWith("subString")       // true if string ends with given "subString"
+        .startsWith("subString")     // true if string starts with given "subString".
+        .endsWith("subString")       // true if string ends with given "subString".
 
 Sorry, I couldn't find ready-to-use "chop", "chomp", "chr", "crypt", "hex", "lcfirst", "ucfirst", "oct", "ord", "rindex" or "sprintf" - at least not for plain String objects anyway. Let me know if there are any so I can update this!
 
