@@ -255,7 +255,7 @@ Notice, in the example above, that we created our array using **val**, and yet w
 In Perl there's a clear separation between lists and arrays. Scala does that too, and you can even store lists for later reuse:
 
 ```scala
-        val myList = List( 1, 2, 3 )
+        val myList = List(1, 2, 3)
 ```
 
 Those behave just like Array objects, except the contents are also immutable.
@@ -267,8 +267,8 @@ Let's do some array manipulation
          var data = Array(1, 2, "Fizz", 4, "Buzz")
 
          // use '++' to concatenates arrays
-         val bigger = data ++ Array( "Fizz", 7, 8, "Fizz" )
-         data ++= Array( "Fizz", 7, 8, "Fizz" ) // like Perl's push or unshift
+         val bigger = data ++ Array("Fizz", 7, 8, "Fizz")
+         data ++= Array("Fizz", 7, 8, "Fizz") // like Perl's push or unshift
 ```
 
 For just one element, you can also:
@@ -361,9 +361,9 @@ Now, if you do arrays in Perl, you're probably looking for ways to replicate all
         sort        ## .sort()    // List() objects only, not Array()
 
         pop         ## .takeRight(1) gets the element, .dropRight(1) reduces the list
-        push        ## ++
+        push        ## :+ (for one element) and ++ (for another list)
         shift       ## .take(1) gets the element, .drop(1) reduces the list
-        unshift     ## ::
+        unshift     ## +: (for one element) and :: (for another list)
         splice      ## .slice(index1, index2) (see also: .patch() for replacing the slice with something else)
 
         # List::Util
