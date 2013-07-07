@@ -238,7 +238,7 @@ This syntax also works a bit like Perl's quote operators, since you don't have t
 ### Arrays
 
 ```scala
-         val myStuff = Array( -42, "foo bar", 3.1415926 )
+         val myStuff = Array(-42, "foo bar", 3.1415926)
 
          myStuff.length         // total size of array
          myStuff(0) = "meep!"   // replaces 1st element
@@ -304,7 +304,7 @@ Well, in Scala you can do the same thing!
 Scala also offers easy ways to *map()* and *grep()*:
 
 ```scala
-      val data = Array( 1, 4, 9, 7, 3, 7, 6, 4, 42 )
+      val data = Array(1, 4, 9, 7, 3, 7, 6, 4, 42)
 
       val double = data.map { _ * 2 }      // (2, 8, 18, 13, ...)
 
@@ -329,7 +329,7 @@ Meaning "for each element *x* in *data*, return `x * 2`". You can name *x* anyth
 One thing, though: since Scala uses objects for everything, you can't make *map()* return more than one element like you can in Perl. This means that if you write something like:
 
 ```scala
-      val data = List( 1, 13, 42 )
+      val data = List(1, 13, 42)
       val moarElements = data.map { x => List( x-1, x, x+1 ) }
 ```
 
@@ -364,7 +364,7 @@ Now, if you do arrays in Perl, you're probably looking for ways to replicate all
         push        ## :+ (for one element) and ++ (for another list)
         shift       ## .take(1) gets the element, .drop(1) reduces the list
         unshift     ## +: (for one element) and :: (for another list)
-        splice      ## .slice(index1, index2) (see also: .patch() for replacing the slice with something else)
+        splice      ## .slice(index1, index2) (see also: .patch() for replacing the slice data)
 
         # List::Util
         first { $_ > 5 }   ## .find { _ > 5 }
