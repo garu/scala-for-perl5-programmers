@@ -574,7 +574,6 @@ Check out [Console]'s documentation for a full list of colors and methods.
 ```scala
        // use the good old operators: &&, ||, <, >, >=, <=, ==, != and ()
        // string operators are inside the string objects as seen above
-
        if (foo > 42) {
          println("yay!")
        }
@@ -1395,7 +1394,7 @@ If you find something simple and easy for beginners, send me a patch!
 The Next Step
 -------------
 
-Hope you've enjoyed this tutorial! Now that you've finished it, there are several places to gather extra and more in-depth information on Scala. [Check 'em out!](http://www.scala-lang.org/node/197]
+Hope you've enjoyed this tutorial! Now that you've finished it, there are several places to gather extra and more in-depth information on Scala. [Check 'em out!](http://www.scala-lang.org/node/197)
 
 That said, the best way to make yourself comfortable with Scala is to code, so go get your hands dirty! Maybe you find it interesting to have this [Scala cheatsheet] with you ;)
 
