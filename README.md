@@ -55,12 +55,14 @@ You're new to Scala, so you likely want to add several comments in your code. He
 
 Note, however, that multiline comments need to be set precisely with **/\*** and **\*/** (unlike C, you can't write something like **/\*\*\*\*\*\***) and, if nested, comment tokens cannot be left unbalanced. In other words:
 
+```scala
         /**** this gives a compile error ****/
 
         /* **** this works fine *** */
 
         /* this also goes kaboom because of /* <== this, which
            should be balanced within the comment somewhere */ 
+```
 
 ### Basic Output
 
