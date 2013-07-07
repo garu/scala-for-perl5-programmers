@@ -196,7 +196,7 @@ Strings have several helper methods to let you manipulate them. The ones that yo
 
         .reverse()                   // like Perl's "reverse"
         .trim()                      // removes whitespace characters from left or right
-        .split("regex")              // like Perl 5's "split" (even lets you set a limit as a second arg)
+        .split("regex")              // like Perl 5's "split" (can even set a limit as a second arg)
         .concat("append me")         // concatenates new string to the end of original string
         .toLowerCase()               // like Perl's "lc"
         .toUpperCase()               // like Perl's "uc"
