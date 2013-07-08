@@ -889,7 +889,7 @@ throw new java.io.IOException("error writing to file")
 
 ### Subroutin... erm... functions!
 
-Instead of "sub", you'll use "*def*" to create functions in Scala:
+Instead of "sub", you'll use **def** to create functions in Scala:
 
 ```scala
 def myCoolFunction {
