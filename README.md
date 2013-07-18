@@ -1407,7 +1407,7 @@ A lot of talk is done over on IRC, on #scala at irc.freenode.net. There are also
 
 That's it, you've done it! Now go play with your new skills!
 
-[Moe]: http://moe.org
+[Moe]: http://moe.iinteractive.com/
 [Scala 2.10.0 MSI]: http://www.scala-lang.org/downloads/distrib/files/scala-2.10.0.msi
 [Scala 2.10.0 tgz]: http://www.scala-lang.org/downloads/distrib/files/scala-2.10.0.tgz
 [JavaSE website]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
