@@ -562,7 +562,7 @@ The Console object provides read* methods to read not just lines, but any kind o
 You can also colorize your output, as you would with Term::ANSIColor's exported colors in Perl:
 
 ```scala
-print( Console.RED + "DANGER!" + Console.WHITE )
+print( Console.RED + "DANGER!" + Console.RESET )
 ```
 
 Check out [Console]'s documentation for a full list of colors and methods.
