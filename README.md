@@ -34,7 +34,7 @@ Running your Scala programs
 
 Save the text file as 'app.scala' and run it through 'bin/scala' program you just installed (can be just 'scala' or a full path, depending on which directory you are and whether or not you set your PATH environment variable accordingly):
 
-    bin/scala app.scala 
+    bin/scala app.scala
 
 Not many Perl developers are into REPLs, but just in case you're one of the few, running `bin/scala` without arguments runs Scala in REPL mode, like Perl's Devel::REPL or Reply, letting you quickly experiment with code. Take it for a spin!
 
@@ -61,7 +61,7 @@ Note, however, that multiline comments need to be set precisely with **/\*** and
 /* **** this works fine *** */
 
 /* this also goes kaboom because of /* <== this, which
-   should be balanced within the comment somewhere */ 
+   should be balanced within the comment somewhere */
 ```
 
 ### Basic Output
@@ -106,7 +106,7 @@ There are several thing to notice here:
 
   * Number notation is very much like Perl's. This means *42* is an integer, *3.14* is a real (you can use 1.23e-4 syntax too), *0644* is octal, *0x3f* (or *0x3F*) is hexadecimal. Sorry, no "0b" notation in Scala, but did you ever use it in Perl?
 
-  * When giving types to variables, use the "name: Type" convention. That's *varname-colon-space-typename*. If you never played with a statically typed language before, you may be tempted to think of variable types as scalar attributes, like "my $foo :String", except Scala would check these at compile time. If it helps to think like that, it's fine, just don't put the colon next to the "attribute", as you (likely) would in Perl.  
+  * When giving types to variables, use the "name: Type" convention. That's *varname-colon-space-typename*. If you never played with a statically typed language before, you may be tempted to think of variable types as scalar attributes, like "my $foo :String", except Scala would check these at compile time. If it helps to think like that, it's fine, just don't put the colon next to the "attribute", as you (likely) would in Perl.
 
   * **You don't *need* to specify the type** (at least not usually). This means most of the time you can simply write "var Foo = 42" and Scala will figure its type for you, kinda like Perl does. *Don't be fooled by this, though!* Scala is statically typed and **will** complain at compile time if you try and assign a different type to the same variable later on. It is recommended that you do **NOT** specify types for variables unless you really have to (e.g. the compiler complains).
 
@@ -228,7 +228,7 @@ Scala provides a rudimentary form of heredocs for this: just enclose your string
 val longString = """This is my long string.
   it includes any "newlines" and there's no
   need for me to escape special characters
-  like " and \. See?""" 
+  like " and \. See?"""
 ```
 
 This syntax also works a bit like Perl's quote operators, since you don't have to escape any characters inside.
@@ -380,7 +380,7 @@ Now, if you do arrays in Perl, you're probably looking for ways to replicate all
     all { $_ > 0 }         ## .forall { _ > 0 }
     none                   ## ??? (can be implemented with "! .exists")
     notall                 ## ??? (can be implemented with "! .forall")
-    true { $_ < 3 }        ## .count { $_ < 3 } 
+    true { $_ < 3 }        ## .count { $_ < 3 }
     false                  ## ??? (can be implemented negating the condition in .count)
 
     firstidx/first_index   ## .indexWhere { _ > 0 }  (also returns -1 if not found)
@@ -591,8 +591,8 @@ else
 
 Couple of things to notice here:
 
-  * Indenting style says **two** whitespace characters for each level. 
-  * It is considered good style to *add a single space after flow-control keywords* like "if", "else", "for" and "while". 
+  * Indenting style says **two** whitespace characters for each level.
+  * It is considered good style to *add a single space after flow-control keywords* like "if", "else", "for" and "while".
   * Sorry, no "unless" and no post-conditionals in Scala.
   * Also, no "elsif". You have to nest your second "if" inside the "else", or use the *case* keyword (see below)
 
@@ -614,7 +614,7 @@ foo match {
   case _  => println("the rest")
 }
 ```
- 
+
 Good style says you should *NOT* use curly braces in a 'case' statement unless the expression does not fit a single line. Also, the _ (underscore) character is a wildcard in Scala, and in this context matches anything.
 
 Oh, one more thing: since Scala is statically typed, there is no 'eq' (or 'ne', 'gt', etc. for that matter). When you write something like `someVar == otherVar`, it will first check the type, then the value. So `100 > 99` is true but `"100" > "99"` is false and they both work. But if you try`"100" > 99`, Scala won't DWIM like Perl and you'll get a type mismatch error. To fix this, you must explicitly convert one of the types to the other with `.toString()` and friends.
@@ -711,7 +711,7 @@ Another idiomatic way to express *for* loops, for instance, uses the `yield()` i
 
 ```scala
 val planets = List("earth", "mars", "jupiter")
-val upper = for (name <- planets) yield name.capitalize 
+val upper = for (name <- planets) yield name.capitalize
 ```
 
 And now *upper* is a List containing "Earth", "Mars" and "Jupiter".
@@ -1077,7 +1077,7 @@ class Point(initialX: Int, initialY: Int) {
   var y = initialY
 
   def add(p: Point): Point = new Point(x+p.x, y+p.y)
-} 
+}
 ```
 
 Now we can call the "add" method:
@@ -1098,7 +1098,7 @@ class Point(initialX: Int, initialY: Int) {
   var y = initialY
 
   def +(p: Point): Point = new Point(x+p.x, y+p.y)
-} 
+}
 ```
 
 You can check: the only change we made above was replace "add" with "+" as the method name. And now we can add our points as we would in plain math:
@@ -1159,7 +1159,7 @@ class Point(initialX: Int, initialY: Int) {
   var y = initialY
 
   def +(p: Point): Point = new Point(x+p.x, y+p.y)
-} 
+}
 ```
 
 This is what we could do to extend it to a 3-dimensional point, one with "x", "y" and "z" instead of just "x" and "y":
@@ -1169,7 +1169,7 @@ class Point3D(initialX: Int, initialY: Int, initialZ: Int) extends Point(initial
   var z = initialZ
 
   def +(p: Point3D): Point = new Point(x+p.x, y+p.y)
-} 
+}
 ```
 
 Notice how we already inherit "var x" and "var y", so we just need to define "var z". Also, when had to override the "+" method to add only "Point3D" objects. Finally, when we say it extends "Point", we need to tell the compiler how to initialize (i.e. construct) our parent object. Since we defined the variables "initialX" and "initialY" in our new class, we can just pass them directly to the original Point class.
@@ -1228,12 +1228,12 @@ One of the advantages of being statically typed is that it's really easy to auto
 ```scala
 /** Start your comment here (note the two '*' starting the 'scaladoc' comment)
   * use left stars followed by a whitespace on every line.
-  * 
+  *
   * yes, even on empty lines (which are rendered as paragraphs)
-  * 
+  *
   * also note that the star in each line is aligned with the second '*' in '/**'
   * so that the text aligns with the start of the comment.
-  * 
+  *
   * = some heading =
   * === some sub-heading ===
   *
@@ -1252,7 +1252,7 @@ You're expected to help scaladoc by describing constructors, parameters and retu
 
 ```scala
 /** A 2-dimensional coordinate
-  * 
+  *
   * @constructor creates a new point with x and y values
   * @param x the point's coordinate in the x axis
   * @param y the point's coordinate in the y axis
@@ -1385,7 +1385,7 @@ So far we learned how to write our files manually, which is fine for simpler pro
 
 In Scala the most popular tool for this is called [SBT]. This tool organizes your project's compiled files in a much nicer fashion and even gets them ready for packaging and publishing. Sadly, it's not a very simple tool to setup and use, so it goes a bit beyond the scope of this guide. Another alternative is Apache's [Maven], so make sure to check that out as well if you can't wrap your mind around SBT.
 
-Note: I know, I know, even with SBT you still have to create a lot of things manually. I'm not saying there isn't a Module::Starter or Dist::Zilla for Scala, I just haven't found one. Yet :-) 
+Note: I know, I know, even with SBT you still have to create a lot of things manually. I'm not saying there isn't a Module::Starter or Dist::Zilla for Scala, I just haven't found one. Yet :-)
 
 If you find something simple and easy for beginners, send me a patch!
 
