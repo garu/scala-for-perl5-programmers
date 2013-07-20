@@ -727,7 +727,7 @@ for {
 
 Now, why should you use *yield* instead of *map* or something else? Good style suggests that, since it's syntatic sugar, *for* comprehensions should be preferred over chained calls to map, filter, etc., as those can get difficult to read and it's one of the main reasons *for* comprehensions exist in the first place. In practice, you should just use whatever syntax makes you feel better and your code more readable. TIMTOWTDI :)
 
-One final note about loops: in Scala, it is expected that you do **not** break from loops, so you won't find things like *next*, *break* nor *continue*. If you really need them - hint: you don't - you can try importing [scala.util.control.Breaks] (read on for how to "use" modules).
+One final note about loops: in Scala, it is expected that you do **not** break from loops, so you won't find things like *next*, *break* nor *continue*. If you really need them - hint: you don't - you can try importing [scala.util.control.Breaks](http://www.scala-lang.org/api/current/index.html#scala.util.control.Breaks) (read on for how to "use" modules).
 
 
 ### File I/O
