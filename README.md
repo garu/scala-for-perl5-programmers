@@ -1127,7 +1127,7 @@ Usually, in Scala, functions and methods need to be called with the parentheses 
 println()       // keep the () on this one because it does I/O
 ```
 
-The parentheses will work as a visual queue of what's going on in your code. As stated in the Scala style guide, religiously observing this convention will dramatically improve code readability and make it much easier to understand at a glance the most basic operation of any given method. This might look like a silly thing to you but it's taken very seriously by the Scala police - much like the Perl police frowns upon seeing a two-argument open() call, or code without strict and warnings :)
+The parentheses will work as a visual cue of what's going on in your code. As stated in the Scala style guide, religiously observing this convention will dramatically improve code readability and make it much easier to understand at a glance the most basic operation of any given method. This might look like a silly thing to you but it's taken very seriously by the Scala police - much like the Perl police frowns upon seeing a two-argument open() call, or code without strict and warnings :)
 
 #### Singletons
 
