@@ -922,7 +922,7 @@ The "=" sign before the start of the block is an important visual hint in Scala 
 def randomInteger: Int = scala.util.Random.nextInt
 ```
 
-Also, just like plain variables, if Scala can infer the return type during compile time you don't need to make it explicit.In fact, also like variables, it is considered good style if you omit the return type whenever possible:
+Also, just like plain variables, if Scala can infer the return type during compile time you don't need to make it explicit.  In fact, also like variables, it is considered good style if you omit the return type whenever possible:
 
 ```scala
 def randomInteger = scala.util.Random.nextInt
