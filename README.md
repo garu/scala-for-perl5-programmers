@@ -825,7 +825,7 @@ val cmd = Process("ls")
 cmd.run
 ```
 
-As with Perl, passing program + arguments as a single string in Scala is accepted, but not recommended for security reasons - specially when one of the arguments comes from user input. Instead, whenever you need to pass arguments, you should use a List() - or a Seq(), which is just a simpler version of a list:
+As with Perl, passing program + arguments as a single string in Scala is accepted, but not recommended for security reasons - especially when one of the arguments comes from user input. Instead, whenever you need to pass arguments, you should use a List() - or a Seq(), which is just a simpler version of a list:
 
 ```scala
 "ls -l".!           // ok
