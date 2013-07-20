@@ -716,7 +716,7 @@ val upper = for (name <- planets) yield name.capitalize
 
 And now *upper* is a List containing "Earth", "Mars" and "Jupiter".
 
-Best Practice: if you choose to use *yield()* in a *for*-comprehention with more than one generator, good style dictates that you use curly braces instead of parenthesis, and put one generator per line, avoiding the ";" between generators and the extra parenthesis for the function block:
+Best Practice: if you choose to use *yield()* in a *for*-comprehension with more than one generator, good style dictates that you use curly braces instead of parenthesis, and put one generator per line, avoiding the ";" between generators and the extra parenthesis for the function block:
 
 ```scala
 for {
