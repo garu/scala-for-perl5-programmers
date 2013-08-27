@@ -72,7 +72,7 @@ print( "Scala <3 Perl\n" )   // like 'print' in Perl
 println( "Scala <3 Perl" )   // like 'say' in Perl
 ```
 
-Enough said for now. Oh, and sorry, you need to keep the parenthesis :-/
+Enough said for now. Oh, and sorry, you need to keep the parentheses :-/
 
 ### Variables
 
