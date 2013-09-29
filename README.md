@@ -1362,10 +1362,10 @@ One of the reasons we love Perl is because of the CPAN. So you might be wonderin
 
 You wish. Sadly, Scala is still a long way to go on that matter. There are, however, a few aggregators you can look at to check for cool projects and libraries:
 
-Scala's "contributed libraries and tools": http://www.scala-lang.org/node/1209
-Github's "Scala" page: https://github.com/languages/Scala
-Implicit.ly's feed of Scala software: http://notes.implicit.ly/
-Scala Wiki's "Tools and Libraries": https://wiki.scala-lang.org/display/SW/Tools+and+Libraries
+   * Scala's "contributed libraries and tools": http://www.scala-lang.org/node/1209
+   * Github's "Scala" page: https://github.com/languages/Scala
+   * Implicit.ly's feed of Scala software: http://notes.implicit.ly/
+   * Scala Wiki's "Tools and Libraries": https://wiki.scala-lang.org/display/SW/Tools+and+Libraries
 
 Here are some very crude equivalences between popular CPAN modules/frameworks and their Scala counterparts:
 
