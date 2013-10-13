@@ -5,7 +5,7 @@ So, you're a Perl hacker dipping your toes into Scala. Maybe you want to contrib
 
 When I decided to learn a bit of Scala, I was devastated to find that most tutorials are for people coming from Java. Well, I'm not really a Java person, so I decided to write a tutorial for people with mostly a Perl 5 background. As I was learning (and writing), I realized Scala feels *very* Perlish, with anonymous methods, more than one way to do things, weird operators and even a context variable! You'll feel right at home soon enough :)
 
-Now, I'm not going to try and teach you how to program, nor go through basic programming knowledge. Instead, I'm going to draw several parallels between Perl 5 and Scala 2.10.0 to get you on your feet as soon as possible.
+Now, I'm not going to try and teach you how to program, nor go through basic programming knowledge. Instead, I'm going to draw several parallels between Perl 5 and Scala 2.10.3 to get you on your feet as soon as possible.
 
 I also made sure to add a lot of Perl names and references throughout this tutorial, so you can search it later on for specific keywords, like "perldoc", "eval", "Test::More", etc.
 
@@ -20,11 +20,11 @@ Setting Up Your Environment
 
 I'm not gonna go through setting up an IDE like Eclipse, NetBeans or whatever. It may boost your productivity in the future, but you're a Perl hacker so you likely already have a favorite text editor. Stick to it :)
 
-On Windows? Install the [Scala 2.10.0 MSI] and move to the next session.
+On Windows? Install the [Scala 2.10.3 MSI] and move to the next session.
 
 On Linux or Mac OS X? Read on:
 
-  1. Download the [Scala 2.10.0 tgz] and unpack it. Find "bin/scala" under the unpacked directory and run it. If you see a "scala>" prompt, yay! Now type ":q" (without the quotes) to quit that terminal and move to the next session. Got some weird Java error? Read on:
+  1. Download the [Scala 2.10.3 tgz] and unpack it. Find "bin/scala" under the unpacked directory and run it. If you see a "scala>" prompt, yay! Now type ":q" (without the quotes) to quit that terminal and move to the next session. Got some weird Java error? Read on:
 
   2. Scala runs on the JVM, and we need to install both JRE and JDK. JRE is the runtime environment, and JDK is the development kit (which includes the JRE so don't worry). Go to the [JavaSE website], download and install the JDK, and go back to step 1.
 
@@ -1409,8 +1409,8 @@ A lot of talk is done over on IRC, on #scala at irc.freenode.net. There are also
 That's it, you've done it! Now go play with your new skills!
 
 [Moe]: http://moe.iinteractive.com/
-[Scala 2.10.0 MSI]: http://www.scala-lang.org/files/archive/scala-2.10.2.msi
-[Scala 2.10.0 tgz]: http://www.scala-lang.org/files/archive/scala-2.10.2.tgz
+[Scala 2.10.3 MSI]: http://www.scala-lang.org/files/archive/scala-2.10.2.msi
+[Scala 2.10.3 tgz]: http://www.scala-lang.org/files/archive/scala-2.10.2.tgz
 [JavaSE website]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 [Exception]: http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html
 [Play Framework]: http://www.playframework.org/documentation/2.1-RC2/ScalaTodoList
