@@ -1409,8 +1409,8 @@ A lot of talk is done over on IRC, on #scala at irc.freenode.net. There are also
 That's it, you've done it! Now go play with your new skills!
 
 [Moe]: http://moe.iinteractive.com/
-[Scala 2.10.3 MSI]: http://www.scala-lang.org/files/archive/scala-2.10.2.msi
-[Scala 2.10.3 tgz]: http://www.scala-lang.org/files/archive/scala-2.10.2.tgz
+[Scala 2.10.3 MSI]: http://www.scala-lang.org/files/archive/scala-2.10.3.msi
+[Scala 2.10.3 tgz]: http://www.scala-lang.org/files/archive/scala-2.10.3.tgz
 [JavaSE website]: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 [Exception]: http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html
 [Play Framework]: http://www.playframework.org/documentation/2.1-RC2/ScalaTodoList
