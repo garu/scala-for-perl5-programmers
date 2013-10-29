@@ -1371,8 +1371,8 @@ Here are some very crude equivalences between popular CPAN modules/frameworks an
 
    * Catalyst => [Play Framework]
    * Dancer/Mojolicious => [Finatra]
-   * DBI => http://scalaquery.org
-   * DBIx::Class => http://blog.xebia.com/2011/06/25/scala-orm-with-squeryl/
+   * DBI => [Slick]
+   * DBIx::Class => [Slick] or http://blog.xebia.com/2011/06/25/scala-orm-with-squeryl/
    * PDL => Saddle [http://saddle.github.io/] and the [scala.math](http://www.scala-lang.org/api/current/scala/math/package.html) core package
    * POE/AnyEvent => not sure :(
    * If you're into Coro, concurrent programming, synchronous/asynchronous messagings, future and whatnot, check out the [scala.actors](http://www.scala-lang.org/api/current/index.html#scala.actors.package) package
@@ -1415,6 +1415,7 @@ That's it, you've done it! Now go play with your new skills!
 [Exception]: http://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html
 [Play Framework]: http://www.playframework.org/documentation/2.1-RC2/ScalaTodoList
 [Finatra]: https://github.com/capotej/finatra#readme
+[Slick]: http://slick.typesafe.com/
 [1]: http://stackoverflow.com/questions/1791408/what-is-the-difference-between-a-var-and-val-definition-in-scala
 [Maps]: http://www.scala-lang.org/api/current/index.html#scala.collection.Map
 [scala.util.control.Breaks]: http://www.scala-lang.org/api/current/index.html#scala.util.control.Breaks
