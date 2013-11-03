@@ -796,7 +796,7 @@ out.close
 
 This is a great example on how to take advantage of Java's libraries from Scala. But yeah, I much rather see Scala's own version :-/
 
-Also check out [http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala](this StackOverflow question) for other ideas.
+Also check out [this StackOverflow question](http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala) for other ideas.
 
 ### Invoking External Programs
 
