@@ -438,7 +438,11 @@ you're actually saying that the key to "bar" is a *variable* called foo, not the
 Adding elements to a Map is easy:
 
 ```scala
-val newHash = myHash + (anotherkey -> "another value")
+var myHash = Map(key -> val)
+myHash += (anotherKey -> anotherValue)
+
+```scala
+val newHash = myHash + (anotherKey -> "another value")
 ```
 
 You can also easily join two Maps:
@@ -452,7 +456,13 @@ in this case, just like when you do it in Perl, any duplicate keys will point to
 Deleting keys is also pretty simple:
 
 ```scala
-myHash - "someKey"
+myHash -= "someKey"
+```
+
+but when you would like to get a new hash without this element, use this:
+
+```scala
+val newHash = myHash - "someKey"
 ```
 
 There's also a cool thing: we often want to fetch values from Maps or set a default. In Perl, you could
