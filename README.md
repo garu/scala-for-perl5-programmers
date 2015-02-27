@@ -978,7 +978,7 @@ val numberSet = numberPattern.findAllIn(lottery)
 numberSet.foreach( println )
 ```
 
-What about named captures? Scala's syntax for this is actually kinda cool:
+What about captures? Scala's syntax for this is actually kinda cool:
 
 ```scala
 // let's create a pattern for a fictitious log file,
