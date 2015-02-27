@@ -1177,7 +1177,7 @@ Notice how we already inherit "var x" and "var y", so we just need to define "va
 
 #### Traits
 
-And if you're into roles (and you should), be in from Moo(se) or Role::Tiny, Scala provides a similar feature called 'traits'. You define a trait just like you define a class or singleton object, except you use the 'trait' keyword:
+And if you're into roles (and you should be), whether from Moo(se) or Role::Tiny, Scala provides a similar feature called 'traits'. You define a trait just like you define a class or singleton object, except you use the 'trait' keyword:
 
 ```scala
 trait MyTrait {
