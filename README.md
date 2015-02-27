@@ -131,7 +131,7 @@ var fibonacci: Int = 0 + 1 + 1 + 2 +
   21 + 34
 ```
 
-This will avoid weird compile-time errors while still letting you tidy your code.
+This will avoid weird compile-time errors while still letting you tidy your code. If you're familiar with JavaScript you've probably run into similar problems due to newlines being a statement separator.
 
 ### Manipulating variables
 
