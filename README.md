@@ -705,9 +705,9 @@ for (i <- 1 to 10; j <- 0 to 3) {
 
 Pretty cool, huh? No more deeply nested loops if you can help it!
 
-As you could see throughout this section, there are several ways to iterate over lists. More than often (and you know this from Perl itself) you could achieve the same results of a *for* loop with a more idiomatic method call on the target list itself, like foreach(), map(), flatMap(), filter() or withFilter(). In fact, the *for* construct in Scala is nothing but syntatic sugar that the compiler translates into calls to those methods!
+As you could see throughout this section, there are several ways to iterate over lists. More than often (and you know this from Perl itself) you could achieve the same results of a *for* loop with a more idiomatic method call on the target list itself, like foreach(), map(), flatMap(), filter() or withFilter(). In fact, the *for* construct in Scala is nothing but syntactic sugar that the compiler translates into calls to those methods!
 
-Another idiomatic way to express *for* loops, for instance, uses the `yield()` idiom. Now, english is not my native tongue so I always had trouble with this one. If you have a Ruby background, note that Scala's yield() behaves differently, so read on. "To yield" in this context means "to give something (to someone else)", and you always see it in combination with *for* loops:
+Another idiomatic way to express *for* loops, for instance, uses the `yield()` idiom. Now, English is not my native tongue so I always had trouble with this one. If you have a Ruby background, note that Scala's yield() behaves differently, so read on. "To yield" in this context means "to give something (to someone else)", and you always see it in combination with *for* loops:
 
 ```scala
 val planets = List("earth", "mars", "jupiter")
@@ -725,7 +725,7 @@ for {
 } yield (x, y)
 ```
 
-Now, why should you use *yield* instead of *map* or something else? Good style suggests that, since it's syntatic sugar, *for* comprehensions should be preferred over chained calls to map, filter, etc., as those can get difficult to read and it's one of the main reasons *for* comprehensions exist in the first place. In practice, you should just use whatever syntax makes you feel better and your code more readable. TIMTOWTDI :)
+Now, why should you use *yield* instead of *map* or something else? Good style suggests that, since it's syntactic sugar, *for* comprehensions should be preferred over chained calls to map, filter, etc., as those can get difficult to read and it's one of the main reasons *for* comprehensions exist in the first place. In practice, you should just use whatever syntax makes you feel better and your code more readable. TIMTOWTDI :)
 
 One final note about loops: in Scala, it is expected that you do **not** break from loops, so you won't find things like *next*, *break* nor *continue*. If you really need them - hint: you don't - you can try importing [scala.util.control.Breaks](http://www.scala-lang.org/api/current/index.html#scala.util.control.Breaks) (read on for how to "use" modules).
 
@@ -873,7 +873,7 @@ try {
   case _: IOException => doSomething
   case error: FileNotFoundException => doSomethingElse(error)
   case a: AssertionError => doYetAnotherThing(a)
-  case unknown => println("Unkown error: " + unknown)
+  case unknown => println("Unknown error: " + unknown)
 }
 ```
 
@@ -1275,7 +1275,7 @@ Not as fancy as Pod, but does the trick. You create your documentation by typing
 
     scaladoc <options> <source files>
 
-Check out scaladoc's man page for extra information. As for generic data such as contact details, license type, general description and code sections, I'm really not sure. Most people just seem to write README and markdown files without standards (so don't expect to find a Pod::Weaver equivalent in Scala), except maybe for keeping docs in the "docs" directory of your package.
+Check out scaladoc's man page for extra information. As for generic data such as contact details, license type, general description and code sections, I'm really not sure. Most people just seem to write README and Markdown files without standards (so don't expect to find a Pod::Weaver equivalent in Scala), except maybe for keeping docs in the "docs" directory of your package.
 
 
 Tests
@@ -1363,7 +1363,7 @@ One of the reasons we love Perl is because of the CPAN. So you might be wonderin
 You wish. Sadly, Scala is still a long way to go on that matter. There are, however, a few aggregators you can look at to check for cool projects and libraries:
 
    * Scala's "contributed libraries and tools": http://www.scala-lang.org/node/1209
-   * Github's "Scala" page: https://github.com/languages/Scala
+   * GitHub's "Scala" page: https://github.com/languages/Scala
    * Implicit.ly's feed of Scala software: http://notes.implicit.ly/
    * Scala Wiki's "Tools and Libraries": https://wiki.scala-lang.org/display/SW/Tools+and+Libraries
 
