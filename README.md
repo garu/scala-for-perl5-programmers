@@ -1169,7 +1169,7 @@ This is what we could do to extend it to a 3-dimensional point, one with "x", "y
 class Point3D(initialX: Int, initialY: Int, initialZ: Int) extends Point(initialX, initialY) {
   var z = initialZ
 
-  def +(p: Point3D): Point = new Point(x+p.x, y+p.y)
+  def +(p: Point3D): Point3D = new Point3D(x+p.x, y+p.y, z+p.z)
 }
 ```
 
